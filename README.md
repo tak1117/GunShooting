@@ -1,20 +1,14 @@
-# Shooting Range VR
+# GunShooting
 
-## Unity VR Project (with SteamVR)
+## Unity VR Weapons & Equipment Simulator (SteamVR + Oculus)
 
-The project was developed on the topic: training in handling weapons and special equipment in virtual reality. This is my bachelor's degree graduation work.
+A VR firearms-handling and equipment-training sandbox built in Unity 2022.3 (URP). It started from a VR weapons-training bachelor's thesis project ([Shooting Range VR](https://github.com/kaayran/ShootingRangeVR) by Anton Pokidov, MIT licensed) and has since been extended with original content: a break-action double-barrel shotgun and a "Zombie Corridor" survival mode.
 
-![Preview #1](./Images/Gameplay/Screenshots/scr7.png)
+![Shooting Range Overview](./Images/ZombieCorridor/targets_overview.png)
 
-![Preview #2](./Images/Gameplay/Screenshots/scr6.png)
+![Shotgun on the Range Table](./Images/ZombieCorridor/shotgun_table.png)
 
-![Preview #3](./Images/Gameplay/Screenshots/scr9.png)
-
-![Preview #4](./Images/Gameplay/Screenshots/scr11.png)
-
-![Preview #5](./Images/Gameplay/Screenshots/scr13.png)
-
-![Preview #6](./Images/Gameplay/Screenshots/scr4.png)
+![Aiming Down the Range](./Images/ZombieCorridor/shotgun_aim.png)
 
 ## Gameplay Mechanics
 
@@ -22,8 +16,7 @@ The project was developed on the topic: training in handling weapons and special
 
 ---
 
-Below with preview and descriptions provided information about core mechanics, like shooting, reloading, disarming magazines of handgun Glock 17.
-Glock 17 with 9mm caliber have 4 different types of ammo, with different start velocity, force on impact and more.
+Core handgun mechanics: shooting, reloading, and disarming/loading magazines on a Glock 17. It supports 4 different 9mm cartridge types, each with its own muzzle velocity, impact force, and behavior.
 
 ![Glock Checks](./Images/Gameplay/Gifs/glock_check.gif)
 
@@ -33,13 +26,21 @@ Glock 17 with 9mm caliber have 4 different types of ammo, with different start v
 
 ![Glock #2](./Images/Gameplay/Screenshots/scr19.png)
 
-![Glock #3](./Images/Gameplay/Screenshots/scr20.png)
+### Double-Barrel Shotgun
+
+---
+
+An original addition: a break-action double-barrel shotgun with two independent, fixed grip points (rear/trigger and fore/barrel) instead of one free-form hold. Either grip can be used alone to carry and aim the gun, but the trigger only responds once both hands are bracing it — just like shouldering a real shotgun. It holds two shells, auto-reloads after a short delay once both are spent, and kicks both hands with haptic feedback on fire.
+
+![Shotgun on the Table](./Images/ZombieCorridor/shotgun_corner.png)
+
+![Shotgun Aiming Down Range](./Images/ZombieCorridor/shotgun_aim.png)
 
 ### Grenade F-1
 
 ---
 
-Russian anti-personnel fragmentation defensive grenade with fuse type of "UZRGM", you can drag the ring on fuse, you can hold lever. Fuse can explode independently of "main" detonate thing. But it will little explosion with a small amount of fragments and low speed (a bit of smoke of course). With fuse inserted in nade it become a real grenade F-1, just hold lever, drag ring and throw in whatever direction you want. Explosion will heavely affect other phycical object around.
+A Russian anti-personnel fragmentation defensive grenade with a "UZRGM" fuse: drag the ring, hold the lever. The fuse alone can be detonated independently of the main charge, producing a small blast with limited fragments and a bit of smoke. With the fuse seated, it becomes a live F-1 grenade — hold the lever, pull the ring, and throw. The explosion meaningfully affects nearby physics objects.
 
 ![F-1 Explosion](./Images/Gameplay/Gifs/grenade_explosion.gif)
 
@@ -47,63 +48,72 @@ Russian anti-personnel fragmentation defensive grenade with fuse type of "UZRGM"
 
 ![Grenade F-1 #2](./Images/Gameplay/Screenshots/scr22.png)
 
-![Grenade F-1 #3](./Images/Gameplay/Screenshots/scr25.png)
-
 ### Equipment
 
 ---
 
-In game presented two types of equipment: body armor and military helmet. Helmet will protect your head and face (if visor is down) against fragments and small calibers. In game you have only one type of helmet - Altyn. Very protective helmet, but it dampens noises a lot outside the helmet, so after putting it on in the game you will hear sounds worse.
-Body armor saves you from grenade fragments and absorbs and dissipates energy of bullets on impact. Current body armor in game - Gzhel. The Gzhel assault bulletproof vest is designed for assault units of the Ministry of Internal Affairs and other law enforcement agencies. Lightweight and excellent protection against direct hits thanks to ceramic plates.
+Two types of protective equipment: body armor and a military helmet. The helmet (Altyn) protects the head and face (when the visor is down) against fragments and small-caliber rounds, but it noticeably dampens outside sound once worn. The body armor (Gzhel) absorbs grenade fragments and dissipates bullet impact energy — a lightweight assault vest with ceramic plates.
 
 ![Equip Helmet](./Images/Gameplay/Gifs/equip_helmet.gif)
 
 ![Altyn #1](./Images/Gameplay/Screenshots/scr14.png)
 
-![Altyn #2](./Images/Gameplay/Screenshots/scr16.png)
-
 ![Gzhel #1](./Images/Gameplay/Screenshots/scr15.png)
-
-![Gzhel #2](./Images/Gameplay/Screenshots/scr17.png)
 
 ### Target Practice
 
 ---
 
-You can practice your skills in shooting on targets in "Guns Range", with remote control you can set distance for human-like target, on your left, on wall you can see average accuracy and amount of bullets fired on target.
+Practice shooting on human-shaped targets in the Shooting Range. A wall-mounted remote control moves the target closer or farther away, and an accuracy panel on the wall tracks hits and total shots fired.
 
 ![Target Practice](./Images/Gameplay/Gifs/move_target.gif)
 
 ![Glock Shoots](./Images/Gameplay/Gifs/glock_shooting.gif)
 
-![Shooting Practice #1](./Images/Gameplay/Screenshots/scr9.png)
-
 ### Knife & Canned Food
 
 ---
 
-In additional, with knife "Anti-Terror" you can try to open russian canned meat and taste it!
+As an extra touch, the "Anti-Terror" knife can pry open a can of Russian tinned meat — and you can taste it.
 
 ![Canned Food](./Images/Gameplay/Gifs/canned_food.gif)
 
 ![Knife #1](./Images/Gameplay/Screenshots/scr24.png)
 
-![Canned Food #1](./Images/Gameplay/Screenshots/scr23.png)
-
-## Controllers Bindings
-
-You will need to configure your bindings to play this game. For Oculus Quest 2 you can find it by this link. ([Oculus Bindings](/ControllerBindings/shootings_range_vr_oculus_quest_2.json))
-You need to allocate two buttons with simple "Button" specialization. For example on Oculus it will be "A", "B" and "X" & "Y". More information on my controllers bindings on image below.
-
-![Controllers Bindings #1](./Images/Instructions/scr1.png)
-
-## Link to latest release of game
-
-<img src="./Assets/Textures/Icon/icon.png" width="128" href='https://github.com/kaayran/ShootingRangeVR/releases/download/beta/Beta_ShootingRangeVR.zip'>
-
-Shooting Range VR Beta v1.0:
+### Zombie Corridor (original mode)
 
 ---
 
-- Link - [Shooting Range VR](https://github.com/kaayran/ShootingRangeVR/releases/)
-- [Download](https://github.com/kaayran/ShootingRangeVR/releases/download/release/ShootingRangeVR.7z)
+A self-contained survival scene added on top of the base training sandbox. Press the start button to release a wave of zombies that wander within a bounded area; each one has its own health bar, flashes red on hit, and sinks out of the level when killed. A HUD displays prompts ("PRESS START TO RELEASE THE ZOMBIES") and the win state ("ALL CLEAR — PRESS START TO GO AGAIN") once every zombie is down. Any weapon that implements hit damage can be used to clear the corridor.
+
+## Scenes
+
+- **ShootingRange** — the main handgun/grenade/equipment training range
+- **IndoorRange** — an indoor range layout for the double-barrel shotgun
+- **ZombieCorridor** — the wave-survival mode
+
+## Controller Bindings
+
+You'll need to configure input bindings before playing. Pre-made bindings are provided for:
+
+- [Oculus Quest 2](/ControllerBindings/shootings_range_vr_oculus_quest_2.json)
+- [Valve Index](/ControllerBindings/shootings_range_vr_valve_index.json)
+
+Allocate two buttons with a simple "Button" specialization (e.g. "A"/"B" and "X"/"Y" on Oculus). See the reference image below for the full binding layout.
+
+![Controllers Bindings #1](./Images/Instructions/scr1.png)
+
+## Tech Stack
+
+- Unity **2022.3.62f3** (Universal Render Pipeline)
+- **SteamVR / OpenVR** interaction system
+- **Oculus XR Plugin** for Quest support
+- TextMesh Pro for in-game UI
+
+## Credits & License
+
+This project is built on top of [Shooting Range VR](https://github.com/kaayran/ShootingRangeVR) by Anton Pokidov, released under the MIT License. See [LICENSE](./LICENSE) for details.
+
+## Releases
+
+See the [Releases page](https://github.com/tak1117/GunShooting/releases) of this repository for downloadable builds.
